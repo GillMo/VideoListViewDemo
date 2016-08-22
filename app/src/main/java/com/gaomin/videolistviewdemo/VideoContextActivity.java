@@ -40,16 +40,16 @@ public class VideoContextActivity extends Activity {
         position = (int) intent.getExtras().get("position");
     }
     private void initActions() {
-        videoItemView.setCompletionListener(new VideoPlayView.CompletionListener() {
-            @Override
-            public void completion(IMediaPlayer mp) {
-                FrameLayout frameLayout = (FrameLayout) videoItemView.getParent();
-                videoItemView.release();
-                if (frameLayout != null && frameLayout.getChildCount() > 0) {
-                    frameLayout.removeAllViews();
-                }
-            }
-        });
+        // videoItemView.setCompletionListener(new VideoPlayView.CompletionListener() {
+        //     @Override
+        //     public void completion(IMediaPlayer mp) {
+        //         FrameLayout frameLayout = (FrameLayout) videoItemView.getParent();
+        //         videoItemView.release();
+        //         if (frameLayout != null && frameLayout.getChildCount() > 0) {
+        //             frameLayout.removeAllViews();
+        //         }
+        //     }
+        // });
         if (videoItemView.getParent() != null) {
                     ((ViewGroup) videoItemView.getParent()).removeAllViews();
                 }
